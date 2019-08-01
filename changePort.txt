@@ -1,0 +1,5 @@
+E:\ReactJs\reactapp2>SET PORT=3100
+
+E:\ReactJs\reactapp2>npm start
+
+to remove snapshots delete snapshots folder in /components
