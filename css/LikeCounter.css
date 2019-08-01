@@ -1,0 +1,36 @@
+.likeButton {
+    background-color:green;
+    width: 100px;
+    height: 50px;
+    color:black;
+}
+.likeButton:hover {
+    background-color:lightgreen;
+}
+.dislikeButton {
+    background-color:red;
+    width: 100px;
+    height: 50px;
+    color:white;
+}
+.dislikeButton:hover {
+    background-color:yellow;
+    color:black;
+}
+.viewButton {
+    background-color:green;
+    width: 100px;
+    height: 50px;
+    color:black;
+}
+.likebutton {
+    color:gray;
+}
+.liked {
+    color:black;
+}
+.text:hover::after {
+    font-size: 20px;
+    color:blue;
+    content: 'Clicked me!!!'
+}
