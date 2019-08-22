@@ -1,0 +1,36 @@
+//composer statement
+const enhance = compose(
+  withRouter,
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  ),
+  withCms({
+    noteToBankerHeader: 'NoteToBanker.header',
+    noteToBankerContent: 'NoteToBanker.content',
+    serviceErrorHeader: 'ServiceError.header',
+    serviceErrorContent: 'ServiceError.content',
+    pageHeader: 'header',
+  }),
+  reduxForm({
+    form: 'accountListForm',
+    destroyOnUnmount: false,
+  }),
+  branch(
+    ({ isFetching, isError }) => isFetching === false && isError === false,
+    withTracking((state, props) => ({
+      event: EventTypes.PAGE,
+      params: {
+        pageName: 'recurring direct debit',
+        pageKey: 'recurring direct debit',
+        path: props.match.path,
+        siteSubSection: '',
+        siteName: props.theme === 'SOL' ? 'sol-plus' : 'ce-plus',
+        empId: props.loggedInUser,
+        siteBrand: props.userBrand,
+      },
+    })),
+  ),
+);
+
+export default enhance(AccountsContainer);
