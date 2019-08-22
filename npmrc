@@ -7,3 +7,14 @@ cafile=C:\Users\L094597\Workspace\wbc-ssl-ca-trust.pem
 chromedriver_filepath=C:\Users\L094597\Workspace\chromedriver_win32.zip
 prefix=C:\Program Files\Nodist\bin 
 cache=C:\Users\L094597\Workspace\npmcache
+
+
+gitconfig
+[user]
+	name = Neeharika Chunduru
+	email = neeharika.chunduru@westpac.com.au
+[core]
+	longpaths = true
+	excludesfile = C:UsersL094597.CORPAUDownloads.gitignore_global
+[http]
+	sslVerify = false
