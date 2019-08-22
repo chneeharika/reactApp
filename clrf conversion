@@ -1,0 +1,3 @@
+find . -name "*.js" -exec dos2unix {} \;
+find . -name "*.jsx" -exec dos2unix {} \;
+find . -name "*.js" -exec dos2unix {} \;
